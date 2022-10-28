@@ -1,0 +1,100 @@
+.question {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 100px 0;
+  .question__block{
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+    .card{
+      width: 400px;
+      min-height: 300px;
+      margin-top: 50px;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      border-right: 3px solid #3D642D;
+      &:nth-child(3){
+        border: 0;
+      }
+      @media screen and (max-width: 1024px) {
+        border-right: 0;
+        border-bottom: 3px solid #3D642D;
+        padding-bottom: 25px;
+      }
+      @media screen and (max-width: 375px) {
+        width: 300px;
+      }
+      .up{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .icon{
+          font-size: 35px;
+          margin: 0;
+        }
+      }
+      .down{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        button{
+          width: 250px;
+          height: 50px;
+          background: #F3A505;
+          border: 0;
+          border-radius: 0;
+          color: whitesmoke;
+          cursor: pointer;
+        }
+        .answer__audio{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .btns__audio{
+            display: flex;
+            gap: 15px;
+            button{
+              width: 50px;
+              height: 50px;
+              font-size: 25px;
+              cursor: pointer;
+            }
+          }
+          audio{
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+  .none{
+    display: none;
+  }
+  .next__btn{
+    width: 150px;
+    height: 50px;
+    background: #3D642D;
+    color: whitesmoke;
+    border: 0;
+    border-radius: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+      right: -30px;
+      border-radius: 0 50% 50% 0;
+    }
+  }
+}
